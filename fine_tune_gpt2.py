@@ -12,6 +12,12 @@ torch.manual_seed(42)
 from transformers import GPT2Tokenizer, GPT2Config, GPT2LMHeadModel
 from transformers import AdamW, get_linear_schedule_with_warmup
 
+"""Code Acknowledgement - sample code for working with Huggingface/GPT-2 was adapted from the following sources
+https://towardsdatascience.com/text-generation-with-pretrained-gpt2-using-pytorch-563c7c90700
+https://huggingface.co/docs/transformers/model_doc/gpt2
+https://colab.research.google.com/github/gmihaila/ml_things/blob/master/notebooks/pytorch/gpt2_finetune_classification.ipynb
+"""
+
 def load_to_text(filepath):
     with open(filepath, "r", encoding='utf-8') as txt_file:
         text = txt_file.read()
